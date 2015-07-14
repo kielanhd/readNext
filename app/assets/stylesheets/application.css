@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+.title-color{
+	color: #38B6CD;
+}
+.gap{
+	margin-bottom: 0px;
+
+
+.jumbotron-text{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 30px;
+}
+
+.navbar{
+  margin-bottom: 0px;
+}
+
+.jumbotron
+{
+    background-color: #FFD841;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+.navbar-color{
+	color:#99D28D;
+}
+
+ .padding-top{
+ 	padding-top:0px;
+} 	
+ .padding-bottom{ 
+ 	padding-bottom:30px;
+} 
