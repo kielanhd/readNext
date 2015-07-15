@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  match "/random_book", to: "books#random_book", via: :get
+  resources :books
   resources :statics
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author first name</th>
+      <th>Author last name</th>
+      <th>Number of pages</th>
+      <th>Is science fiction</th>
+      <th>Is satire</th>
+      <th>Is drama</th>
+      <th>Is action</th>
+      <th>Is adventure</th>
+      <th>Is romance</th>
+      <th>Is mystery</th>
+      <th>Is horror</th>
+      <th>Is children</th>
+      <th>Is science</th>
+      <th>Is history</th>
+      <th>Is math</th>
+      <th>Is anthology</th>
+      <th>Is poetry</th>
+      <th>Is comic</th>
+      <th>Is diary</th>
+      <th>Is series</th>
+      <th>Is bio autobio</th>
+      <th>Is fantasy</th>
+      <th>Is dragon</th>
+      <th>Is fairy tale</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.author_first_name %></td>
+        <td><%= book.author_last_name %></td>
+        <td><%= book.number_of_pages %></td>
+        <td><%= book.is_science_fiction %></td>
+        <td><%= book.is_satire %></td>
+        <td><%= book.is_drama %></td>
+        <td><%= book.is_action %></td>
+        <td><%= book.is_adventure %></td>
+        <td><%= book.is_romance %></td>
+        <td><%= book.is_mystery %></td>
+        <td><%= book.is_horror %></td>
+        <td><%= book.is_children %></td>
+        <td><%= book.is_science %></td>
+        <td><%= book.is_history %></td>
+        <td><%= book.is_math %></td>
+        <td><%= book.is_anthology %></td>
+        <td><%= book.is_poetry %></td>
+        <td><%= book.is_comic %></td>
+        <td><%= book.is_diary %></td>
+        <td><%= book.is_series %></td>
+        <td><%= book.is_bio_autobio %></td>
+        <td><%= book.is_fantasy %></td>
+        <td><%= book.is_dragon %></td>
+        <td><%= book.is_fairy_tale %></td>
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book', new_book_path %>

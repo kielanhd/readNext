@@ -11,7 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150709235415) do
+ActiveRecord::Schema.define(version: 20150715213939) do
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title"
+    t.string   "author_first_name"
+    t.string   "author_last_name"
+    t.integer  "number_of_pages"
+    t.boolean  "is_science_fiction"
+    t.boolean  "is_satire"
+    t.boolean  "is_drama"
+    t.boolean  "is_action"
+    t.boolean  "is_adventure"
+    t.boolean  "is_romance"
+    t.boolean  "is_mystery"
+    t.boolean  "is_horror"
+    t.boolean  "is_children"
+    t.boolean  "is_science"
+    t.boolean  "is_history"
+    t.boolean  "is_math"
+    t.boolean  "is_anthology"
+    t.boolean  "is_poetry"
+    t.boolean  "is_comic"
+    t.boolean  "is_diary"
+    t.boolean  "is_series"
+    t.boolean  "is_bio_autobio"
+    t.boolean  "is_fantasy"
+    t.boolean  "is_dragon"
+    t.boolean  "is_fairy_tale"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "statics", force: :cascade do |t|
     t.datetime "created_at", null: false

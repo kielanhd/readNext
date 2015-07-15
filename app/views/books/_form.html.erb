@@ -1,0 +1,117 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :author_first_name %><br>
+    <%= f.text_field :author_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :author_last_name %><br>
+    <%= f.text_field :author_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_pages %><br>
+    <%= f.number_field :number_of_pages %>
+  </div>
+  <div class="field">
+    <%= f.label :is_science_fiction %><br>
+    <%= f.check_box :is_science_fiction %>
+  </div>
+  <div class="field">
+    <%= f.label :is_satire %><br>
+    <%= f.check_box :is_satire %>
+  </div>
+  <div class="field">
+    <%= f.label :is_drama %><br>
+    <%= f.check_box :is_drama %>
+  </div>
+  <div class="field">
+    <%= f.label :is_action %><br>
+    <%= f.check_box :is_action %>
+  </div>
+  <div class="field">
+    <%= f.label :is_adventure %><br>
+    <%= f.check_box :is_adventure %>
+  </div>
+  <div class="field">
+    <%= f.label :is_romance %><br>
+    <%= f.check_box :is_romance %>
+  </div>
+  <div class="field">
+    <%= f.label :is_mystery %><br>
+    <%= f.check_box :is_mystery %>
+  </div>
+  <div class="field">
+    <%= f.label :is_horror %><br>
+    <%= f.check_box :is_horror %>
+  </div>
+  <div class="field">
+    <%= f.label :is_children %><br>
+    <%= f.check_box :is_children %>
+  </div>
+  <div class="field">
+    <%= f.label :is_science %><br>
+    <%= f.check_box :is_science %>
+  </div>
+  <div class="field">
+    <%= f.label :is_history %><br>
+    <%= f.check_box :is_history %>
+  </div>
+  <div class="field">
+    <%= f.label :is_math %><br>
+    <%= f.check_box :is_math %>
+  </div>
+  <div class="field">
+    <%= f.label :is_anthology %><br>
+    <%= f.check_box :is_anthology %>
+  </div>
+  <div class="field">
+    <%= f.label :is_poetry %><br>
+    <%= f.check_box :is_poetry %>
+  </div>
+  <div class="field">
+    <%= f.label :is_comic %><br>
+    <%= f.check_box :is_comic %>
+  </div>
+  <div class="field">
+    <%= f.label :is_diary %><br>
+    <%= f.check_box :is_diary %>
+  </div>
+  <div class="field">
+    <%= f.label :is_series %><br>
+    <%= f.check_box :is_series %>
+  </div>
+  <div class="field">
+    <%= f.label :is_bio_autobio %><br>
+    <%= f.check_box :is_bio_autobio %>
+  </div>
+  <div class="field">
+    <%= f.label :is_fantasy %><br>
+    <%= f.check_box :is_fantasy %>
+  </div>
+  <div class="field">
+    <%= f.label :is_dragon %><br>
+    <%= f.check_box :is_dragon %>
+  </div>
+  <div class="field">
+    <%= f.label :is_fairy_tale %><br>
+    <%= f.check_box :is_fairy_tale %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
