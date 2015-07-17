@@ -6,6 +6,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :author_last_name
       t.integer :number_of_pages
       t.boolean :is_science_fiction
+      t.boolean :is_top_100
       t.boolean :is_satire
       t.boolean :is_drama
       t.boolean :is_action
