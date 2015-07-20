@@ -1,129 +1,139 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<div class="row">
+  <div class="col-md-5 col-md-offset-1">
 
-<p>
-  <strong>Author first name:</strong>
-  <%= @book.author_first_name %>
-</p>
+    <p>
+      <strong>Title:</strong>
+      <%= @book.title %>
+    </p>
 
-<p>
-  <strong>Author last name:</strong>
-  <%= @book.author_last_name %>
-</p>
+    <p>
+      <strong>Author first name:</strong>
+      <%= @book.author_first_name %>
+    </p>
 
-<p>
-  <strong>Number of pages:</strong>
-  <%= @book.number_of_pages %>
-</p>
+    <p>
+      <strong>Author last name:</strong>
+      <%= @book.author_last_name %>
+    </p>
 
-<p>
-  <strong>Is science fiction:</strong>
-  <%= @book.is_science_fiction %>
-</p>
+    <p>
+      <strong>Number of pages:</strong>
+      <%= @book.number_of_pages %>
+    </p>
 
-<p>
-  <strong>Is satire:</strong>
-  <%= @book.is_satire %>
-</p>
+    <p>
+      <strong>Is science fiction:</strong>
+      <%= @book.is_science_fiction %>
+    </p>
 
-<p>
-  <strong>Is drama:</strong>
-  <%= @book.is_drama %>
-</p>
+    <p>
+      <strong>Is satire:</strong>
+      <%= @book.is_satire %>
+    </p>
 
-<p>
-  <strong>Is action:</strong>
-  <%= @book.is_action %>
-</p>
+    <p>
+      <strong>Is drama:</strong>
+      <%= @book.is_drama %>
+    </p>
 
-<p>
-  <strong>Is adventure:</strong>
-  <%= @book.is_adventure %>
-</p>
+    <p>
+      <strong>Is action:</strong>
+      <%= @book.is_action %>
+    </p>
 
-<p>
-  <strong>Is romance:</strong>
-  <%= @book.is_romance %>
-</p>
+    <p>
+      <strong>Is adventure:</strong>
+      <%= @book.is_adventure %>
+    </p>
 
-<p>
-  <strong>Is mystery:</strong>
-  <%= @book.is_mystery %>
-</p>
+    <p>
+      <strong>Is romance:</strong>
+      <%= @book.is_romance %>
+    </p>
 
-<p>
-  <strong>Is horror:</strong>
-  <%= @book.is_horror %>
-</p>
+    <p>
+      <strong>Is mystery:</strong>
+      <%= @book.is_mystery %>
+    </p>
 
-<p>
-  <strong>Is children:</strong>
-  <%= @book.is_children %>
-</p>
+    <p>
+      <strong>Is horror:</strong>
+      <%= @book.is_horror %>
+    </p>
 
-<p>
-  <strong>Is science:</strong>
-  <%= @book.is_science %>
-</p>
+    <p>
+      <strong>Is children:</strong>
+      <%= @book.is_children %>
+    </p>
 
-<p>
-  <strong>Is history:</strong>
-  <%= @book.is_history %>
-</p>
+    <p>
+      <strong>Is science:</strong>
+      <%= @book.is_science %>
+    </p>
 
-<p>
-  <strong>Is math:</strong>
-  <%= @book.is_math %>
-</p>
+    <p>
+      <strong>Is history:</strong>
+      <%= @book.is_history %>
+    </p>
 
-<p>
-  <strong>Is anthology:</strong>
-  <%= @book.is_anthology %>
-</p>
+    <p>
+      <strong>Is math:</strong>
+      <%= @book.is_math %>
+    </p>
 
-<p>
-  <strong>Is poetry:</strong>
-  <%= @book.is_poetry %>
-</p>
+    <p>
+      <strong>Is anthology:</strong>
+      <%= @book.is_anthology %>
+    </p>
 
-<p>
-  <strong>Is comic:</strong>
-  <%= @book.is_comic %>
-</p>
+    <p>
+      <strong>Is poetry:</strong>
+      <%= @book.is_poetry %>
+    </p>
 
-<p>
-  <strong>Is diary:</strong>
-  <%= @book.is_diary %>
-</p>
+    <p>
+      <strong>Is comic:</strong>
+      <%= @book.is_comic %>
+    </p>
 
-<p>
-  <strong>Is series:</strong>
-  <%= @book.is_series %>
-</p>
+    <p>
+      <strong>Is diary:</strong>
+      <%= @book.is_diary %>
+    </p>
 
-<p>
-  <strong>Is bio autobio:</strong>
-  <%= @book.is_bio_autobio %>
-</p>
+    <p>
+      <strong>Is series:</strong>
+      <%= @book.is_series %>
+    </p>
 
-<p>
-  <strong>Is fantasy:</strong>
-  <%= @book.is_fantasy %>
-</p>
+    <p>
+      <strong>Is bio autobio:</strong>
+      <%= @book.is_bio_autobio %>
+    </p>
 
-<p>
-  <strong>Is dragon:</strong>
-  <%= @book.is_dragon %>
-</p>
+    <p>
+      <strong>Is fantasy:</strong>
+      <%= @book.is_fantasy %>
+    </p>
 
-<p>
-  <strong>Is fairy tale:</strong>
-  <%= @book.is_fairy_tale %>
-</p>
+    <p>
+      <strong>Is dragon:</strong>
+      <%= @book.is_dragon %>
+    </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+    <p>
+      <strong>Is fairy tale:</strong>
+      <%= @book.is_fairy_tale %>
+    </p>
+  </div>
+  <div class="col-md-5">
+    <% if @book.cover.exists? %>
+      <%= image_tag @book.cover.url %>
+    <% end %>
+  </div>
+</div>
+
+    <%= link_to 'Edit', edit_book_path(@book) %> |
+    <%= link_to 'Back', books_path %>
