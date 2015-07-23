@@ -6,7 +6,18 @@ Rails.application.configure do
 
 
   config.action_mailer.default_url_options = { :host => 'next-read.herokuapp.com', :protocol => 'http' }
-
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = 
+    {
+          :address => "smtp.gmail.com",
+          :port => 587,
+          :authentication => :plain,
+          :enable_starttls_auto => true,
+          :user_name => 'pgss.ruby.on.rails@gmail.com',
+          :password => 'my test password'
+      }
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
