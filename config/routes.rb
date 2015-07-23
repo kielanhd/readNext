@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :users
   resources :users
   match "/random_book", to: "books#random_book", via: :get
