@@ -35,7 +35,9 @@
               <li role="separator" class="divider"></li>
               <li><a href="#">Thank you Jeff</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="<%= user_path %>">your account</a></li>
+              <% if signed_in? %>
+                <li><a href="<%= user_path(current_user) %>">your account</a></li>
+              <% end %>
             </ul>
           </li>
         </ul>
